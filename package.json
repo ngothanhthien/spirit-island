@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "@unocss/reset": "^0.48.5",
+    "pinia": "^2.0.29"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.34.1",
+    "@unocss/nuxt": "^0.48.4",
+    "@vueuse/core": "^9.11.1",
+    "@vueuse/nuxt": "^9.11.1",
+    "eslint": "^8.32.0",
+    "nuxt": "^3.0.0"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}
