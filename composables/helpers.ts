@@ -7,10 +7,10 @@ function shuffleArray(arr: Array<unknown>) {
   }
 }
 function takeRandoms(arr: Array<unknown>, n: number) {
-  if (n < arr.length)
-    return
   const raws: Array<unknown> = [...arr]
   const result: Array<unknown> = []
+  if (n < arr.length)
+    return raws
   for (let i = 0; i < n; i++) {
     const randomIndex = Math.floor(Math.random() * raws.length)
     result.push(raws[randomIndex])

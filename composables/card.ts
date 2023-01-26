@@ -16,6 +16,11 @@ const fears = reactive({
   discard: [] as Array<FearCard>,
   current: [] as Array<FearCard>,
 })
+const fearsRemain = reactive({
+  level1: [] as Array<FearCard>,
+  level2: [] as Array<FearCard>,
+  level3: [] as Array<FearCard>,
+})
 const earnedFear = computed(() => fears.current.length)
 function shuffle(deck: CardDeck) {
   shuffleArray(deck.draw)
@@ -50,12 +55,19 @@ function drawMinor(n = 4) {
 function drawMajor(n = 4) {
   drawCard(n, majors)
 }
+const fearLevel1Remain = computed(() => fearsRemain.level1.length)
+const fearLevel2Remain = computed(() => fearsRemain.level2.length)
+const fearLevel3Remain = computed(() => fearsRemain.level3.length)
 
 export {
   minors,
   majors,
   fears,
   earnedFear,
+  fearsRemain,
+  fearLevel1Remain,
+  fearLevel2Remain,
+  fearLevel3Remain,
   shuffle,
   setupMinor,
   setupMajor,

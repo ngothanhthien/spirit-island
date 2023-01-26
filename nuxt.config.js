@@ -4,8 +4,8 @@ export default {
     '@pinia/nuxt',
     '@vueuse/nuxt',
   ],
-  plugins: [
-    { src: '~~/plugins/resetcss.js' },
+  css: [
+    '@unocss/reset/tailwind.css',
   ],
   unocss: {
     // presets
@@ -16,6 +16,7 @@ export default {
     // core options
     shortcuts: {
       'absolute-center': 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
+      'bg-sidebar': 'bg-warmgray-500',
     },
     rules: [],
   },

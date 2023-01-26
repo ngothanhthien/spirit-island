@@ -1,6 +1,6 @@
-import type { FearCard, PowerCard } from '~~/types'
+import type { Adversary, FearCard, PowerCard } from '~~/types'
 
-const MinorCards: Array<PowerCard> = [
+const MINOR_CARDS: Array<PowerCard> = [
   {
     name: 'Savage Mawbeasts',
     cost: 0,
@@ -1108,7 +1108,7 @@ const MinorCards: Array<PowerCard> = [
     description: 'Defend 4. Push up to 1 Blight. -If you have- 2 Sun: 1 Fear',
   },
 ]
-const MajorCards: Array<PowerCard> = [
+const MAJOR_CARDS: Array<PowerCard> = [
   {
     name: 'The Trees and Stones Speak of War',
     cost: 2,
@@ -1836,7 +1836,7 @@ const MajorCards: Array<PowerCard> = [
     description: '6 Fear. Destroy all Invaders. -If you have- 2 Sun, 2 Moon, 4 Water, 4 Earth: Destroy the board containing target land and everything on that board. All destroyed Blight is removed from the game instead of being returned to the Blight Card.',
   },
 ]
-const FearCards: Array<FearCard> = [
+const FEAR_CARDS: Array<FearCard> = [
   {
     name: 'Fear of the Unseen',
     level1: 'Each player removes 1 Explorer / Town from a land with SacredSite.',
@@ -2084,8 +2084,52 @@ const FearCards: Array<FearCard> = [
     level3: 'Terror Level 3: Each player chooses a different land to Isolate. Also, Defend 4 in those lands.',
   },
 ]
+const INVADER_CARD_STAGE_1 = ['m1', 'j1', 's1', 'w1']
+const INVADER_CARD_STAGE_2 = ['m2', 'j2', 's2', 'w2', 'cs']
+const INVADER_CARD_STAGE_3 = ['js', 'jw', 'mj', 'mw', 'sm', 'sw']
+const ADVERSARY: Array<Adversary> = [
+  {
+    title: 'England',
+    code: 'england',
+    difficulty: [1, 3, 4, 6, 7, 9, 11],
+  },
+  {
+    title: 'Prussia',
+    code: 'prussia',
+    difficulty: [1, 2, 4, 6, 7, 8, 9],
+  },
+  {
+    title: 'France',
+    code: 'france',
+    difficulty: [2, 3, 5, 7, 8, 9, 10],
+  },
+  {
+    title: 'Scotland',
+    code: 'scotland',
+    difficulty: [1, 3, 4, 6, 7, 8, 10],
+  },
+  {
+    title: 'Sweden',
+    code: 'sweden',
+    difficulty: [1, 2, 3, 5, 6, 7, 8],
+  },
+  {
+    title: 'Habsburg',
+    code: 'habsburg',
+    difficulty: [2, 3, 5, 6, 8, 9, 10],
+  },
+  {
+    title: 'Russia',
+    code: 'russia',
+    difficulty: [1, 3, 4, 6, 7, 9, 11],
+  },
+]
 export {
-  MinorCards,
-  MajorCards,
-  FearCards,
+  MINOR_CARDS,
+  MAJOR_CARDS,
+  FEAR_CARDS,
+  INVADER_CARD_STAGE_1,
+  INVADER_CARD_STAGE_2,
+  INVADER_CARD_STAGE_3,
+  ADVERSARY,
 }

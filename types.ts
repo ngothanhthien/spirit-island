@@ -18,3 +18,9 @@ export interface FearCard {
   level2: string
   level3: string
 }
+export type IslandLetter = 'A' | 'B' | 'C' | 'D' | 'E' | 'F'
+export interface Adversary {
+  title: string
+  code: string
+  difficulty: Array<number>
+}
