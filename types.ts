@@ -24,3 +24,4 @@ export interface Adversary {
   code: string
   difficulty: Array<number>
 }
+export type AvailableColor = 'yellow'

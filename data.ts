@@ -2124,6 +2124,9 @@ const ADVERSARY: Array<Adversary> = [
     difficulty: [1, 3, 4, 6, 7, 9, 11],
   },
 ]
+const PRESENCE_COLOR = {
+  yellow: '#fffff',
+}
 export {
   MINOR_CARDS,
   MAJOR_CARDS,
@@ -2132,4 +2135,5 @@ export {
   INVADER_CARD_STAGE_2,
   INVADER_CARD_STAGE_3,
   ADVERSARY,
+  PRESENCE_COLOR,
 }

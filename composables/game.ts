@@ -1,24 +1,46 @@
-const game = reactive({
-  currentTurn: 0,
-  currentPhase: 0,
-  earnedFear: 0,
-  maxFear: 0,
-  terrorLevel: 1,
+const currentTurn = ref(0)
+const currentPhase = ref(0)
+const earnedFear = ref(0)
+const maxFear = ref(0)
+const terrorLevel = ref(1)
+const cityStats = reactive({
+  health: 3,
+  damage: 3,
+})
+const townStats = reactive({
+  health: 2,
+  damage: 2,
+})
+const dahanStats = reactive({
+  health: 2,
+  damage: 2,
+})
+const explorerStats = reactive({
+  health: 1,
+  damage: 1,
 })
 function addFear() {
-  game.earnedFear++
+  earnedFear.value++
 }
 function removeFear() {
-  game.earnedFear--
+  earnedFear.value--
 }
 function increaseMaxFear() {
-  game.maxFear++
+  maxFear.value++
 }
 function decreaseMaxFear() {
-  game.maxFear--
+  maxFear.value--
 }
 export {
-  game,
+  currentTurn,
+  currentPhase,
+  earnedFear,
+  maxFear,
+  terrorLevel,
+  cityStats,
+  townStats,
+  dahanStats,
+  explorerStats,
   addFear,
   removeFear,
   increaseMaxFear,
